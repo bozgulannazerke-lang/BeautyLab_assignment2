@@ -1,60 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beauty Lab - About Us</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Lab - About Us</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page-3">
+<body class="page-3 d-flex flex-column min-vh-100">
 
+    <header id="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white-95 fixed-top shadow-sm py-2">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="images/лого1.jpg" alt="Beauty Lab Logo" class="logo-img me-2">
+                    <span class="fw-bold text-dark-pink fs-4">Beauty Lab</span>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link px-3 fw-semibold" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 fw-semibold" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active px-3 fw-semibold" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 fw-semibold" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<header id="main-header">
-<nav>
-<ul class="nav-menu">
-<li><a href="index.html">Home</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="about.html" class="active">About Us</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-</header>
+    <div class="container my-5 pt-5 flex-grow-1">
+        <div class="row g-4 mt-2">
+            
+            <aside class="col-12 col-lg-3">
+                <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box">
+                    <h3 class="h5 fw-bold text-dark-pink mb-3">About Beauty Lab</h3>
+                    <p class="mb-3 text-muted">Dedicated to delivering a seamless web experience with gorgeous aesthetics.</p>
+                    <div class="pt-3 border-top">
+                        <h4 class="h6 fw-bold text-dark-pink mb-2">Our Mission</h4>
+                        <p class="small text-muted mb-0">Creating confidence and elegance for every client through professional care.</p>
+                    </div>
+                </div>
+            </aside>
 
+            <main class="col-12 col-lg-9">
+                <div class="text-center mb-4 p-4 bg-white-85 rounded-4 shadow-sm">
+                    <h1 class="display-6 fw-bold text-dark-pink responsive-title">About Our Team</h1>
+                    <p class="text-muted mb-0 responsive-text">Meet the creators behind Beauty Lab, dedicated to delivering a seamless web experience with gorgeous aesthetics.</p>
+                </div>
 
-<div class="container">
-<h1>About Our Team</h1>
-<p style="text-align: center;">Meet the creators behind Beauty Lab, dedicated to delivering a seamless web experience with gorgeous aesthetics.</p>
+                <!-- Team Cards (col-lg-6 grid according to Task 3) -->
+                <div class="row g-4 mb-5">
+                    <div class="col-12 col-lg-6">
+                        <div class="card h-100 p-4 text-center border-0 shadow-sm rounded-4 bg-white-90 custom-card">
+                            <img src="images/ерке1.jpeg" alt="Yerkenaz Azat" class="profile-img rounded-circle mx-auto mb-3 border border-3 border-pink">
+                            <h2 class="h4 fw-bold text-dark-pink mb-1">Yerkenaz Azat</h2>
+                            <p class="text-pink fw-semibold mb-3">Lead Frontend Developer</p>
+                            <ul class="list-unstyled text-muted small mb-4">
+                                <li><strong>Hobby:</strong> Coding & Dancing</li>
+                                <li><strong>Pages:</strong> Home & Services</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-pink rounded-pill mt-auto">Contact Yerkenaz</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="card h-100 p-4 text-center border-0 shadow-sm rounded-4 bg-white-90 custom-card">
+                            <img src="images/наз1.jpeg" alt="Nazerke Bozgulan" class="profile-img rounded-circle mx-auto mb-3 border border-3 border-pink">
+                            <h2 class="h4 fw-bold text-dark-pink mb-1">Nazerke Bozgulan</h2>
+                            <p class="text-pink fw-semibold mb-3">UI/UX & Content Manager</p>
+                            <ul class="list-unstyled text-muted small mb-4">
+                                <li><strong>Hobby:</strong> Design & Sketching</li>
+                                <li><strong>Pages:</strong> About Us & Contact</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-pink rounded-pill mt-auto">Contact Nazerke</a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Task 7: Bootstrap Carousel (9 images) -->
+                <div class="bg-white-90 p-4 rounded-4 shadow-sm mb-4">
+                    <h2 class="h4 fw-bold text-dark-pink text-center mb-4">Our Aesthetic Atmosphere</h2>
+                    
+                    <div id="atmosphereCarousel" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#atmosphereCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#atmosphereCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#atmosphereCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#atmosphereCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#atmosphereCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#atmosphereCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#atmosphereCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#atmosphereCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                            <button type="button" data-bs-target="#atmosphereCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/интерьер.jpg" class="d-block w-100 carousel-media-img" alt="Cozy Interior">
+                                <div class="carousel-caption d-none d-md-block bg-dark-transparent rounded-3 p-2">
+                                    <h5>Cozy Interior</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/макияж.jpg" class="d-block w-100 carousel-media-img" alt="Makeup Corner">
+                                <div class="carousel-caption d-none d-md-block bg-dark-transparent rounded-3 p-2">
+                                    <h5>Makeup Corner</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/хэйр.jpg" class="d-block w-100 carousel-media-img" alt="Hair Station">
+                                <div class="carousel-caption d-none d-md-block bg-dark-transparent rounded-3 p-2">
+                                    <h5>Hair Station</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/ногти.jpg" class="d-block w-100 carousel-media-img" alt="Nail Studio">
+                                <div class="carousel-caption d-none d-md-block bg-dark-transparent rounded-3 p-2">
+                                    <h5>Nail Studio</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/уход.jpg" class="d-block w-100 carousel-media-img" alt="Skincare Zone">
+                                <div class="carousel-caption d-none d-md-block bg-dark-transparent rounded-3 p-2">
+                                    <h5>Skincare Zone</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/релакс.jpg" class="d-block w-100 carousel-media-img" alt="Relax Lounge">
+                                <div class="carousel-caption d-none d-md-block bg-dark-transparent rounded-3 p-2">
+                                    <h5>Relax Lounge</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/косметика.jpg" class="d-block w-100 carousel-media-img" alt="Premium Products">
+                                <div class="carousel-caption d-none d-md-block bg-dark-transparent rounded-3 p-2">
+                                    <h5>Premium Products</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/бар.jpg" class="d-block w-100 carousel-media-img" alt="Complimentary Drinks">
+                                <div class="carousel-caption d-none d-md-block bg-dark-transparent rounded-3 p-2">
+                                    <h5>Complimentary Drinks</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/детали.jpg" class="d-block w-100 carousel-media-img" alt="Aesthetic Details">
+                                <div class="carousel-caption d-none d-md-block bg-dark-transparent rounded-3 p-2">
+                                    <h5>Aesthetic Details</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#atmosphereCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#atmosphereCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
 
-<div class="card-grid">
-<div class="card" style="text-align: center;">
-<img src="images/ерке1.jpeg" alt="Yerkenaz Azat" class="profile-img">
-<h2>Yerkenaz Azat</h2>
-<p>Lead Frontend Developer</p>
-<ul style="list-style: none; padding: 0; color: #6b5b60; font-size: 14px;">
-<li>Hobby: Coding & Dancing</li>
-<li>Pages: home and services</li>
-</ul>
-</div>
+                    <!-- Task 2 (Part 1): Custom CSS Media Query Gallery Grid fallback -->
+                    <div class="mt-5">
+                        <h3 class="h6 text-center text-muted uppercase tracking-wider mb-3">Static Gallery View</h3>
+                        <div class="custom-media-grid">
+                            <div class="media-card-box"><img src="images/интерьер.jpg" alt="Interior"></div>
+                            <div class="media-card-box"><img src="images/макияж.jpg" alt="Makeup"></div>
+                            <div class="media-card-box"><img src="images/хэйр.jpg" alt="Hair"></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
 
+    <footer class="bg-white-90 text-center py-3 border-top mt-auto">
+        <div class="container">
+            <p class="mb-0 text-muted small">&copy; 2026 Beauty Lab. All rights reserved. | Authors: Yerkenaz Azat & Nazerke Bozgulan</p>
+        </div>
+    </footer>
 
-<div class="card" style="text-align: center;">
-<img src="images/наз1.jpeg" alt="Nazerke Bozgulan" class="profile-img">
-<h2>Nazerke Bozgulan</h2>
-<p>UI/UX & Content Manager</p>
-<ul style="list-style: none; padding: 0; color: #6b5b60; font-size: 14px;">
-<li>Hobby: Design & Sketching</li>
-<li>Pages: about and contact</li>
-</ul>
-</div>
-</div>
-</div>
-
-
-<footer>
-<p>&copy; 2026 Beauty Lab. All rights reserved. | Authors: Yerkenaz Azat & Nazerke Bozgulan]</p>
-</footer>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
