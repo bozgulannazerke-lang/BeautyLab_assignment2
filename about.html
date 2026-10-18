@@ -35,13 +35,20 @@
         <div class="row g-4 mt-2">
             
             <aside class="col-12 col-lg-3">
-                <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box">
+                <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box mb-4">
                     <h3 class="h5 fw-bold text-dark-pink mb-3">About Beauty Lab</h3>
                     <p class="mb-3 text-muted">Dedicated to delivering a seamless web experience with gorgeous aesthetics.</p>
                     <div class="pt-3 border-top">
                         <h4 class="h6 fw-bold text-dark-pink mb-2">Our Mission</h4>
                         <p class="small text-muted mb-0">Creating confidence and elegance for every client through professional care.</p>
                     </div>
+                </div>
+
+                <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box">
+                    <h3 class="h5 fw-bold text-dark-pink mb-3">Live Interactive</h3>
+                    <div id="datetime-display" class="small fw-bold text-dark-pink mb-3 p-2 bg-pink-light rounded-3 text-center"></div>
+                    <button id="colorBtn" class="btn btn-outline-pink btn-sm w-100 mb-2">Change Background</button>
+                    <button id="openPopupBtn" class="btn btn-pink btn-sm w-100">Subscribe Popup</button>
                 </div>
             </aside>
 
@@ -76,6 +83,52 @@
                             <a href="contact.html" class="btn btn-pink rounded-pill mt-auto">Contact Nazerke</a>
                         </div>
                     </div>
+                </div>
+
+                <div class="bg-white-90 p-4 rounded-4 shadow-sm mb-4">
+                    <h2 class="h4 fw-bold text-dark-pink text-center mb-4">Frequently Asked Questions</h2>
+                    <div class="accordion custom-accordion">
+                        <div class="accordion-item mb-2 border rounded-3 overflow-hidden">
+                            <button class="accordion-header w-100 text-start p-3 bg-light fw-bold border-0 text-dark-pink">What services does Beauty Lab offer?</button>
+                            <div class="accordion-content px-3 bg-white">
+                                <p class="py-2 mb-0 text-muted small">We offer professional hair styling, makeup artistry, nail studio care, and relaxing skincare treatments.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2 border rounded-3 overflow-hidden">
+                            <button class="accordion-header w-100 text-start p-3 bg-light fw-bold border-0 text-dark-pink">How can I book an appointment?</button>
+                            <div class="accordion-content px-3 bg-white">
+                                <p class="py-2 mb-0 text-muted small">You can easily reach out to us through our contact page or fill out our subscription popup form.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2 border rounded-3 overflow-hidden">
+                            <button class="accordion-header w-100 text-start p-3 bg-light fw-bold border-0 text-dark-pink">What is your cancellation policy?</button>
+                            <div class="accordion-content px-3 bg-white">
+                                <p class="py-2 mb-0 text-muted small">Please inform us at least 2 hours before your appointment time if you need to reschedule or cancel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white-90 p-4 rounded-4 shadow-sm mb-4">
+                    <h2 class="h4 fw-bold text-dark-pink text-center mb-4">Client Registration</h2>
+                    <form id="regForm" class="p-3">
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold text-muted small">Email Address:</label>
+                            <input type="email" class="form-control form-control-pink rounded-3" id="email" required placeholder="example@gmail.com">
+                            <small class="error-msg text-danger fw-semibold" id="emailError"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label fw-semibold text-muted small">Password:</label>
+                            <input type="password" class="form-control form-control-pink rounded-3" id="password" required placeholder="At least 6 characters">
+                            <small class="error-msg text-danger fw-semibold" id="passwordError"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label fw-semibold text-muted small">Confirm Password:</label>
+                            <input type="password" class="form-control form-control-pink rounded-3" id="confirmPassword" required placeholder="Repeat password">
+                            <small class="error-msg text-danger fw-semibold" id="confirmError"></small>
+                        </div>
+                        <button type="submit" class="btn btn-pink rounded-pill px-4">Register Now</button>
+                    </form>
                 </div>
 
                 <div class="bg-white-90 p-4 rounded-4 shadow-sm mb-4">
@@ -172,6 +225,19 @@
         </div>
     </div>
 
+    <div id="popupModal" class="modal">
+        <div class="modal-content p-4 rounded-4 bg-white position-relative shadow-lg">
+            <span id="closePopup" class="close position-absolute top-0 end-0 p-3 fs-4">&times;</span>
+            <h3 class="h5 fw-bold text-dark-pink mb-3">Subscribe to Beauty Lab</h3>
+            <form id="popupForm">
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-pink w-100">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
     <footer class="bg-white-90 text-center py-3 border-top mt-auto">
         <div class="container">
             <p class="mb-0 text-muted small">&copy; 2026 Beauty Lab. All rights reserved. | Authors: Yerkenaz Azat & Nazerke Bozgulan</p>
@@ -179,5 +245,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
