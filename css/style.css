@@ -11,6 +11,7 @@ body {
   color: #4a4043;
   line-height: 1.6;
   background-color: #fff5f7;
+  transition: background-color 0.5s ease;
 }
 
 body.page-1 {
@@ -170,7 +171,6 @@ h1, h2, h3, h4, .navbar-brand {
   background-color: #ffffff;
 }
 
-
 .responsive-title {
   font-size: 26px;
 }
@@ -232,4 +232,38 @@ h1, h2, h3, h4, .navbar-brand {
   .media-card-box {
     flex: 0 0 calc(33.333% - 10px);
   }
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out;
+}
+
+.accordion-header {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 350px;
+  border-radius: 1rem;
+}
+
+.close {
+  cursor: pointer;
 }
