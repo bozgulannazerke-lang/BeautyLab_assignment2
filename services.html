@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beauty Lab - Services</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -36,7 +35,7 @@
         <div class="row g-4 mt-2">
             
             <aside class="col-12 col-lg-3">
-                <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box">
+                <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box mb-4">
                     <h3 class="h5 fw-bold text-dark-pink mb-3">Special Offers</h3>
                     <p class="mb-3 text-muted">Book any 2 services and receive a complimentary beverage of your choice!</p>
                     <div class="pt-3 border-top">
@@ -44,6 +43,13 @@
                         <p class="small text-muted mb-3">Need urgent appointment?</p>
                         <a href="contact.html" class="btn btn-pink btn-sm rounded-pill w-100 fw-semibold">Book Now</a>
                     </div>
+                </div>
+
+                <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box">
+                    <h3 class="h5 fw-bold text-dark-pink mb-3">Live Interactive</h3>
+                    <div id="datetime-display" class="small fw-bold text-dark-pink mb-3 p-2 bg-pink-light rounded-3 text-center"></div>
+                    <button id="colorBtn" class="btn btn-outline-pink btn-sm w-100 mb-2">Change Background</button>
+                    <button id="openPopupBtn" class="btn btn-pink btn-sm w-100">Subscribe Popup</button>
                 </div>
             </aside>
 
@@ -190,6 +196,19 @@
         </div>
     </div>
 
+    <div id="popupModal" class="modal">
+        <div class="modal-content p-4 rounded-4 bg-white position-relative shadow-lg">
+            <span id="closePopup" class="close position-absolute top-0 end-0 p-3 fs-4">&times;</span>
+            <h3 class="h5 fw-bold text-dark-pink mb-3">Subscribe to Beauty Lab</h3>
+            <form id="popupForm">
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-pink w-100">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
     <footer class="bg-white-90 text-center py-3 border-top mt-auto">
         <div class="container">
             <p class="mb-0 text-muted small">&copy; 2026 Beauty Lab. All rights reserved. | Authors: Yerkenaz Azat & Nazerke Bozgulan</p>
@@ -197,5 +216,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

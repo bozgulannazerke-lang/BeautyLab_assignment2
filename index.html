@@ -9,7 +9,6 @@
 </head>
 <body class="page-1 d-flex flex-column min-vh-100">
 
-
     <header id="main-header">
         <nav class="navbar navbar-expand-lg navbar-light bg-white-95 fixed-top shadow-sm py-2">
             <div class="container">
@@ -35,15 +34,21 @@
     <div class="container my-5 pt-5 flex-grow-1">
         <div class="row g-4 mt-2">
             
-
             <aside class="col-12 col-lg-3">
-                <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box">
+                <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box mb-4">
                     <h3 class="h5 fw-bold text-dark-pink mb-3">Working Hours</h3>
                     <p class="mb-3 text-muted">Every day:<br><strong class="text-dark">10:00 AM – 8:00 PM</strong></p>
                     <div class="pt-3 border-top">
                         <h4 class="h6 fw-bold text-dark-pink">Location</h4>
                         <p class="mb-0 text-muted">Mangilik El Ave, "Beauty Lab" Studio</p>
                     </div>
+                </div>
+
+                <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box">
+                    <h3 class="h5 fw-bold text-dark-pink mb-3">Live Interactive</h3>
+                    <div id="datetime-display" class="small fw-bold text-dark-pink mb-3 p-2 bg-pink-light rounded-3 text-center"></div>
+                    <button id="colorBtn" class="btn btn-outline-pink btn-sm w-100 mb-2">Change Background</button>
+                    <button id="openPopupBtn" class="btn btn-pink btn-sm w-100">Subscribe Popup</button>
                 </div>
             </aside>
 
@@ -93,6 +98,18 @@
         </div>
     </div>
 
+    <div id="popupModal" class="modal">
+        <div class="modal-content p-4 rounded-4 bg-white position-relative shadow-lg">
+            <span id="closePopup" class="close position-absolute top-0 end-0 p-3 fs-4">&times;</span>
+            <h3 class="h5 fw-bold text-dark-pink mb-3">Subscribe to Beauty Lab</h3>
+            <form id="popupForm">
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-pink w-100">Subscribe</button>
+            </form>
+        </div>
+    </div>
 
     <footer class="bg-white-90 text-center py-3 border-top mt-auto">
         <div class="container">
@@ -100,7 +117,7 @@
         </div>
     </footer>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
