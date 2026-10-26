@@ -97,6 +97,31 @@
                 </div>
 
                 <div class="bg-white-90 p-4 rounded-4 shadow-sm mb-4">
+                    <h2 class="h4 fw-bold text-dark-pink mb-3">Price Finder</h2>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <button class="filter-btn active-filter px-3 py-1" data-category="all">All</button>
+                        <button class="filter-btn px-3 py-1" data-category="makeup">Makeup</button>
+                        <button class="filter-btn px-3 py-1" data-category="hair">Hair</button>
+                        <button class="filter-btn px-3 py-1" data-category="nails">Nails</button>
+                    </div>
+                    <ul id="priceList" class="list-group mb-2"></ul>
+                    <p id="priceTotal" class="fw-bold text-dark-pink mb-0"></p>
+                </div>
+                
+                <div class="bg-white-90 p-4 rounded-4 shadow-sm mb-4 text-center">
+                    <h2 class="h4 fw-bold text-dark-pink mb-3">Rate Our Services</h2>
+                    <div class="star-rating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                    <p id="ratingMessage" class="text-muted small mb-0">Click a star to rate us</p>
+                </div>
+
+            
+                <div class="bg-white-90 p-4 rounded-4 shadow-sm mb-4">
                     <h2 class="h4 fw-bold text-dark-pink mb-3">Makeup</h2>
                     <div class="table-responsive">
                         <table class="table table-hover table-striped align-middle rounded-3 overflow-hidden">
