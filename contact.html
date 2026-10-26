@@ -55,7 +55,7 @@
             </aside>
 
             <main class="col-12 col-lg-9">
-                <div class="bg-white-90 p-4 p-md-5 rounded-4 shadow-sm mx-auto" style="max-width: 750px;">
+                <div class="bg-white-90 p-4 p-md-5 rounded-4 shadow-sm mx-auto contact-box">
                     <h1 class="display-6 fw-bold text-dark-pink text-center responsive-title mb-2">Get in Touch</h1>
                     <p class="text-muted text-center responsive-text mb-4">Fill out the form below to book an appointment and choose your favorite complimentary drink.</p>
 
@@ -63,7 +63,7 @@
                         <p class="mb-0 text-dark-pink fw-semibold">After filling out the form, our manager will contact your number and schedule you for an available time slot!</p>
                     </div>
 
-                    <form action="#" method="POST" class="needs-validation">
+                    <form id="contactForm" action="#" method="POST" class="needs-validation">
                         <div class="mb-3">
                             <label for="name" class="form-label text-muted fw-semibold small">Your Name:</label>
                             <input type="text" class="form-control form-control-pink rounded-3" id="name" name="name" required placeholder="Enter your full name">
@@ -112,6 +112,7 @@
                             <button type="reset" class="btn btn-outline-pink py-2 rounded-end-pill fw-semibold">Reset</button>
                         </div>
                     </form>
+                    <div id="formStatus"></div>
                 </div>
             </main>
         </div>
