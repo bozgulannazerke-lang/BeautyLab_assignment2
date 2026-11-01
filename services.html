@@ -6,9 +6,10 @@
     <title>Beauty Lab - Services</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
 </head>
 <body class="page-2 d-flex flex-column min-vh-100">
-
+ 
     <header id="main-header">
         <nav class="navbar navbar-expand-lg navbar-light bg-white-95 fixed-top shadow-sm py-2">
             <div class="container">
@@ -30,10 +31,10 @@
             </div>
         </nav>
     </header>
-
+ 
     <div class="container my-5 pt-5 flex-grow-1">
         <div class="row g-4 mt-2">
-            
+ 
             <aside class="col-12 col-lg-3">
                 <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box mb-4">
                     <h3 class="h5 fw-bold text-dark-pink mb-3">Special Offers</h3>
@@ -44,7 +45,7 @@
                         <a href="contact.html" class="btn btn-pink btn-sm rounded-pill w-100 fw-semibold">Book Now</a>
                     </div>
                 </div>
-
+ 
                 <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box">
                     <h3 class="h5 fw-bold text-dark-pink mb-3">Live Interactive</h3>
                     <div id="datetime-display" class="small fw-bold text-dark-pink mb-3 p-2 bg-pink-light rounded-3 text-center"></div>
@@ -52,19 +53,19 @@
                     <button id="openPopupBtn" class="btn btn-pink btn-sm w-100">Subscribe Popup</button>
                 </div>
             </aside>
-
+ 
             <main class="col-12 col-lg-9">
                 <div class="text-center mb-4 p-4 bg-white-85 rounded-4 shadow-sm">
                     <h1 class="display-6 fw-bold text-dark-pink responsive-title">Our Services & Pricing</h1>
                     <p class="text-muted mb-0 responsive-text">Explore our detailed pricing tables for Makeup, Hair Styling, and Nail Care services.</p>
                 </div>
-
+ 
                 <h2 class="h4 fw-bold text-dark-pink mb-3">Featured Packages</h2>
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
                     <div class="col">
                         <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative custom-card">
                             <span class="badge bg-pink text-white position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">Best Value</span>
-                            <img src="images/фулл.jpg" class="card-img-top card-media-img" alt="Full Glam">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/фулл.jpg" class="card-img-top card-media-img lazy" alt="Full Glam">
                             <div class="card-body d-flex flex-column p-4">
                                 <h3 class="card-title h5 fw-bold text-dark-pink">Full Glam Package</h3>
                                 <p class="card-text text-muted flex-grow-1">Evening makeup combined with luxury curls and a complimentary drink.</p>
@@ -75,7 +76,7 @@
                     <div class="col">
                         <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative custom-card">
                             <span class="badge bg-pink text-white position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">Quick</span>
-                            <img src="images/экспресс.jpg" class="card-img-top card-media-img" alt="Express Care">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/экспресс.jpg" class="card-img-top card-media-img lazy" alt="Express Care">
                             <div class="card-body d-flex flex-column p-4">
                                 <h3 class="card-title h5 fw-bold text-dark-pink">Express Beauty</h3>
                                 <p class="card-text text-muted flex-grow-1">Day makeup plus quick styling for your busy workday look.</p>
@@ -86,7 +87,7 @@
                     <div class="col">
                         <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative custom-card">
                             <span class="badge bg-pink text-white position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">Popular</span>
-                            <img src="images/ногтикомбо.jpg" class="card-img-top card-media-img" alt="Nail Care Combo">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/ногтикомбо.jpg" class="card-img-top card-media-img lazy" alt="Nail Care Combo">
                             <div class="card-body d-flex flex-column p-4">
                                 <h3 class="card-title h5 fw-bold text-dark-pink">Nail Art Combo</h3>
                                 <p class="card-text text-muted flex-grow-1">Full manicure with custom French design and luxury hand care treatment.</p>
@@ -95,9 +96,13 @@
                         </div>
                     </div>
                 </div>
-
+ 
                 <div class="bg-white-90 p-4 rounded-4 shadow-sm mb-4">
                     <h2 class="h4 fw-bold text-dark-pink mb-3">Price Finder</h2>
+                    <div id="searchWrap" class="position-relative mb-3">
+                        <input type="text" id="serviceSearch" class="form-control form-control-pink rounded-pill px-4" placeholder="Search services: curls, bridal, french..." autocomplete="off">
+                        <ul id="suggestBox" class="suggest-box list-unstyled"></ul>
+                    </div>
                     <div class="d-flex flex-wrap gap-2 mb-3">
                         <button class="filter-btn active-filter px-3 py-1" data-category="all">All</button>
                         <button class="filter-btn px-3 py-1" data-category="makeup">Makeup</button>
@@ -105,9 +110,10 @@
                         <button class="filter-btn px-3 py-1" data-category="nails">Nails</button>
                     </div>
                     <ul id="priceList" class="list-group mb-2"></ul>
+                    <p id="noResults" class="text-muted d-none mb-2">No services found. Try another keyword.</p>
                     <p id="priceTotal" class="fw-bold text-dark-pink mb-0"></p>
                 </div>
-                
+ 
                 <div class="bg-white-90 p-4 rounded-4 shadow-sm mb-4 text-center">
                     <h2 class="h4 fw-bold text-dark-pink mb-3">Rate Our Services</h2>
                     <div class="star-rating">
@@ -119,8 +125,7 @@
                     </div>
                     <p id="ratingMessage" class="text-muted small mb-0">Click a star to rate us</p>
                 </div>
-
-            
+ 
                 <div class="bg-white-90 p-4 rounded-4 shadow-sm mb-4">
                     <h2 class="h4 fw-bold text-dark-pink mb-3">Makeup</h2>
                     <div class="table-responsive">
@@ -151,7 +156,7 @@
                             </tbody>
                         </table>
                     </div>
-
+ 
                     <h2 class="h4 fw-bold text-dark-pink mt-4 mb-3">Hair Styling</h2>
                     <div class="table-responsive">
                         <table class="table table-hover table-striped align-middle rounded-3 overflow-hidden">
@@ -181,7 +186,7 @@
                             </tbody>
                         </table>
                     </div>
-
+ 
                     <h2 class="h4 fw-bold text-dark-pink mt-4 mb-3">Nail Care</h2>
                     <div class="table-responsive">
                         <table class="table table-hover table-striped align-middle rounded-3 overflow-hidden">
@@ -220,7 +225,7 @@
             </main>
         </div>
     </div>
-
+ 
     <div id="popupModal" class="modal">
         <div class="modal-content p-4 rounded-4 bg-white position-relative shadow-lg">
             <span id="closePopup" class="close position-absolute top-0 end-0 p-3 fs-4">&times;</span>
@@ -233,13 +238,13 @@
             </form>
         </div>
     </div>
-
+ 
     <footer class="bg-white-90 text-center py-3 border-top mt-auto">
         <div class="container">
             <p class="mb-0 text-muted small">&copy; 2026 Beauty Lab. All rights reserved. | Authors: Yerkenaz Azat & Nazerke Bozgulan</p>
         </div>
     </footer>
-
+ 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
