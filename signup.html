@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Lab - Sign Up</title>
+    <script>try{document.documentElement.setAttribute('data-bs-theme',localStorage.getItem('beautylab_theme')||'light')}catch(e){}</script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-4 d-flex flex-column min-vh-100">
+
+    <header id="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white-95 fixed-top shadow-sm py-2">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="images/logo.jpg" alt="Beauty Lab Logo" class="logo-img me-2">
+                    <span class="fw-bold text-dark-pink fs-4">Beauty Lab</span>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link px-3 fw-semibold" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 fw-semibold" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 fw-semibold" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 fw-semibold" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 fw-semibold" href="signup.html">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container my-5 pt-5 flex-grow-1">
+        <div class="row g-4 mt-2">
+
+            <aside class="col-12 col-lg-3">
+<div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box mb-4">
+                    <h3 class="h5 fw-bold text-dark-pink mb-3">Password Checklist</h3>
+                    <ul id="passwordChecklist" class="list-unstyled small text-muted mb-3">
+                        <li data-check="length" class="mb-2"><span class="check-icon">⬜</span> At least 8 characters</li>
+                        <li data-check="case" class="mb-2"><span class="check-icon">⬜</span> Upper and lower case letters</li>
+                        <li data-check="digit" class="mb-2"><span class="check-icon">⬜</span> At least one digit</li>
+                        <li data-check="match"><span class="check-icon">⬜</span> Passwords match</li>
+                    </ul>
+                    <div class="pt-3 border-top">
+                        <h4 class="h6 fw-bold text-dark-pink mb-2">Already a member?</h4>
+                        <button type="button" data-open-login class="btn btn-outline-pink btn-sm rounded-pill w-100 fw-semibold">Log In</button>
+                    </div></div>
+
+                <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box">
+                    <h3 class="h5 fw-bold text-dark-pink mb-3">Live Interactive</h3>
+                    <div id="datetime-display" class="small fw-bold text-dark-pink mb-3 p-2 bg-pink-light rounded-3 text-center"></div>
+                    <button id="colorBtn" class="btn btn-outline-pink btn-sm w-100 mb-2">Change Background</button>
+                    <button id="openPopupBtn" class="btn btn-pink btn-sm w-100">Subscribe Popup</button>
+                </div>
+            </aside>
+
+            <main class="col-12 col-lg-9">
+                <div class="text-center mb-4 p-4 bg-white-85 rounded-4 shadow-sm">
+                    <h1 class="display-6 fw-bold text-dark-pink responsive-title">Create Your Account</h1>
+                    <p class="text-muted mb-0 responsive-text">Join Beauty Lab to book visits and keep all your requests in one place.</p>
+                </div>
+
+                <div id="signedInBox" class="bg-white-90 p-4 p-md-5 rounded-4 shadow-sm mx-auto auth-box text-center d-none">
+                    <div class="display-5 mb-2">✅</div>
+                    <h2 class="h4 fw-bold text-dark-pink mb-2">You already have an account</h2>
+                    <p class="text-muted mb-4">Welcome, <strong id="signedInName"></strong>! Log out from the menu if you want to create another account.</p>
+                    <a href="profile.html" class="btn btn-pink rounded-pill px-4">Go to My Profile</a>
+                </div>
+
+                <div id="signupBox" class="bg-white-90 p-4 p-md-5 rounded-4 shadow-sm mx-auto auth-box">
+                    <form id="signupForm" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label text-muted fw-semibold small">Your Name:</label>
+                            <input type="text" class="form-control form-control-pink rounded-3" id="name" name="name" data-rules="required|name" placeholder="Enter your full name" autocomplete="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label text-muted fw-semibold small">Phone Number:</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-pink-light border-light-pink text-dark-pink">+7</span>
+                                <input type="tel" class="form-control form-control-pink rounded-end-3" id="phone" name="phone" data-rules="required|phone" placeholder="(---) --- -- --">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label text-muted fw-semibold small">Email Address:</label>
+                            <input type="text" class="form-control form-control-pink rounded-3" id="email" name="email" data-rules="required|email" placeholder="example@gmail.com" inputmode="email" autocomplete="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label text-muted fw-semibold small">Password:</label>
+                            <input type="password" class="form-control form-control-pink rounded-3" id="password" name="password" data-rules="required|password" placeholder="At least 8 characters" autocomplete="new-password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label text-muted fw-semibold small">Confirm Password:</label>
+                            <input type="password" class="form-control form-control-pink rounded-3" id="confirmPassword" name="confirmPassword" data-rules="required|match:password" placeholder="Repeat password" autocomplete="new-password">
+                        </div>
+                        <button type="submit" class="btn btn-pink w-100 rounded-pill py-2 fw-semibold">Sign Up</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="popupModal" class="modal">
+        <div class="modal-content p-4 rounded-4 bg-white position-relative shadow-lg">
+            <span id="closePopup" class="close position-absolute top-0 end-0 p-3 fs-4">&times;</span>
+            <h3 class="h5 fw-bold text-dark-pink mb-3">Subscribe to Beauty Lab</h3>
+            <form id="popupForm" novalidate>
+                <div class="mb-3">
+                    <input type="text" inputmode="email" id="popupEmail" class="form-control" placeholder="Enter your email" data-rules="required|email">
+                </div>
+                <button type="submit" class="btn btn-pink w-100">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-white-90 text-center py-3 border-top mt-auto">
+        <div class="container">
+            <p class="mb-0 text-muted small">&copy; 2026 Beauty Lab. All rights reserved. | Authors: Yerkenaz Azat & Nazerke Bozgulan</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
