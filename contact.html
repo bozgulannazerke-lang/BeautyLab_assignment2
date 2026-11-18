@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beauty Lab - Contact</title>
+    <script>try{document.documentElement.setAttribute('data-bs-theme',localStorage.getItem('beautylab_theme')||'light')}catch(e){}</script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
 </head>
 <body class="page-4 d-flex flex-column min-vh-100">
- 
+
     <header id="main-header">
         <nav class="navbar navbar-expand-lg navbar-light bg-white-95 fixed-top shadow-sm py-2">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="images/лого1.jpg" alt="Beauty Lab Logo" class="logo-img me-2">
+                    <img src="images/logo.jpg" alt="Beauty Lab Logo" class="logo-img me-2">
                     <span class="fw-bold text-dark-pink fs-4">Beauty Lab</span>
                 </a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,57 +26,28 @@
                         <li class="nav-item"><a class="nav-link px-3 fw-semibold" href="services.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link px-3 fw-semibold" href="about.html">About Us</a></li>
                         <li class="nav-item"><a class="nav-link active px-3 fw-semibold" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 fw-semibold" href="signup.html">Sign Up</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
- 
+
     <div class="container my-5 pt-5 flex-grow-1">
         <div class="row g-4 mt-2">
- 
+            
             <aside class="col-12 col-lg-3">
                 <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box mb-4">
                     <h3 class="h5 fw-bold text-dark-pink mb-3">Book Your Visit</h3>
-                    <p class="mb-3 text-muted">Select your favorite service and complimentary drink in the form!</p>
+                    <p class="mb-3 text-muted">Pick a service, date and time. Your favorite drink is on us!</p>
                     <div class="pt-3 border-top">
                         <h4 class="h6 fw-bold text-dark-pink mb-2">Studio Address</h4>
- 
-                        <div class="copy-row d-flex align-items-center justify-content-between mb-2">
-                            <p class="small text-muted mb-0 copy-text">Mangilik El Ave, "Beauty Lab"</p>
-                            <span class="copy-wrap">
-                                <button type="button" class="copy-btn" data-copy="Mangilik El Ave, &quot;Beauty Lab&quot;" data-label="Address" aria-label="Copy address">
-                                    <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                                    <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                </button>
-                                <span class="copy-tooltip">Copied to clipboard!</span>
-                            </span>
-                        </div>
- 
-                        <div class="copy-row d-flex align-items-center justify-content-between mb-2">
-                            <p class="small text-muted mb-0"><strong>Phone:</strong> <span class="copy-text">+7 (707) 123-45-67</span></p>
-                            <span class="copy-wrap">
-                                <button type="button" class="copy-btn" data-copy="+7 (707) 123-45-67" data-label="Phone number" aria-label="Copy phone number">
-                                    <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                                    <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                </button>
-                                <span class="copy-tooltip">Copied to clipboard!</span>
-                            </span>
-                        </div>
- 
-                        <div class="copy-row d-flex align-items-center justify-content-between">
-                            <p class="small text-muted mb-0"><strong>Instagram:</strong> <span class="copy-text">@beautylab_astana</span></p>
-                            <span class="copy-wrap">
-                                <button type="button" class="copy-btn" data-copy="@beautylab_astana" data-label="Instagram handle" aria-label="Copy Instagram handle">
-                                    <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                                    <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                </button>
-                                <span class="copy-tooltip">Copied to clipboard!</span>
-                            </span>
-                        </div>
+                        <p class="small text-muted mb-1">Mangilik El Ave, "Beauty Lab"</p>
+                        <p class="small text-muted mb-1"><strong>Phone:</strong> +7 (707) 123-45-67</p>
+                        <p class="small text-muted mb-0"><strong>Instagram:</strong> @beautylab_astana</p>
                     </div>
                 </div>
- 
+
                 <div class="p-4 bg-white-90 rounded-4 shadow-sm border border-light-pink sidebar-box">
                     <h3 class="h5 fw-bold text-dark-pink mb-3">Live Interactive</h3>
                     <div id="datetime-display" class="small fw-bold text-dark-pink mb-3 p-2 bg-pink-light rounded-3 text-center"></div>
@@ -84,46 +55,56 @@
                     <button id="openPopupBtn" class="btn btn-pink btn-sm w-100">Subscribe Popup</button>
                 </div>
             </aside>
- 
+
             <main class="col-12 col-lg-9">
-                <div class="bg-white-90 p-4 p-md-5 rounded-4 shadow-sm mx-auto contact-box">
-                    <h1 class="display-6 fw-bold text-dark-pink text-center responsive-title mb-2">Get in Touch</h1>
-                    <p class="text-muted text-center responsive-text mb-4">Fill out the form below to book an appointment and choose your favorite complimentary drink.</p>
- 
+                <div class="text-center mb-4 p-4 bg-white-85 rounded-4 shadow-sm">
+                    <h1 class="display-6 fw-bold text-dark-pink responsive-title">Book Your Visit</h1>
+                    <p class="text-muted mb-0 responsive-text">Choose a service, a time and your favorite complimentary drink. Our manager will confirm by phone.</p>
+                </div>
+
+                <div id="bookingGate" class="bg-white-90 p-4 p-md-5 rounded-4 shadow-sm text-center d-none">
+                    <div class="display-5 mb-2">🔒</div>
+                    <h2 class="h4 fw-bold text-dark-pink mb-2">Log in to book</h2>
+                    <p class="text-muted mb-4">Booking requests are linked to your profile, so you can track and cancel them any time.</p>
+                    <button type="button" data-open-login class="btn btn-pink rounded-pill px-4">Log In</button>
+                    <a href="signup.html" class="btn btn-outline-pink rounded-pill px-4">Sign Up</a>
+                </div>
+
+                <div id="bookingBox" class="bg-white-90 p-4 p-md-5 rounded-4 shadow-sm mx-auto contact-box d-none">
                     <div class="alert alert-pink border-0 text-center mb-4 rounded-3 p-3">
-                        <p class="mb-0 text-dark-pink fw-semibold">After filling out the form, our manager will contact your number and schedule you for an available time slot!</p>
+                        <p id="bookingAs" class="mb-0 text-dark-pink fw-semibold"></p>
                     </div>
- 
-                    <form id="contactForm" action="#" method="POST" class="needs-validation">
+                    <form id="bookingForm" novalidate>
                         <div class="mb-3">
-                            <label for="name" class="form-label text-muted fw-semibold small">Your Name:</label>
-                            <input type="text" class="form-control form-control-pink rounded-3" id="name" name="name" required placeholder="Enter your full name">
-                        </div>
- 
-                        <div class="mb-3">
-                            <label for="phone" class="form-label text-muted fw-semibold small">Phone Number:</label>
+                            <label for="phone" class="form-label text-muted fw-semibold small">Contact Phone:</label>
                             <div class="input-group">
                                 <span class="input-group-text bg-pink-light border-light-pink text-dark-pink">+7</span>
-                                <input type="tel" class="form-control form-control-pink rounded-end-3" id="phone" name="phone" required placeholder="(---) --- -- --">
+                                <input type="tel" class="form-control form-control-pink rounded-end-3" id="phone" name="phone" data-rules="required|phone" placeholder="(---) --- -- --">
                             </div>
                         </div>
- 
                         <div class="mb-3">
-                            <label for="email" class="form-label text-muted fw-semibold small">Email Address:</label>
-                            <input type="email" class="form-control form-control-pink rounded-3" id="email" name="email" required placeholder="example@gmail.com">
-                        </div>
- 
-                        <div class="mb-3">
-                            <label for="service" class="form-label text-muted fw-semibold small">Select Service:</label>
-                            <select class="form-select form-control-pink rounded-3" id="service" name="service">
+                            <label for="service" class="form-label text-muted fw-semibold small">Service:</label>
+                            <select class="form-select form-control-pink rounded-3" id="service" name="service" data-rules="required">
+                                <option value="">Choose a service</option>
                                 <option value="makeup">Makeup</option>
                                 <option value="hair">Hair Styling</option>
                                 <option value="nails">Nail Care</option>
                             </select>
                         </div>
- 
+                        <div class="row">
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="date" class="form-label text-muted fw-semibold small">Date:</label>
+                                <input type="date" class="form-control form-control-pink rounded-3" id="date" name="date" data-rules="required|futureDate">
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="time" class="form-label text-muted fw-semibold small">Time (10:00 - 19:00):</label>
+                                <select class="form-select form-control-pink rounded-3" id="time" name="time" data-rules="required">
+                                    <option value="">Choose a time</option><option value="10:00">10:00</option><option value="11:00">11:00</option><option value="12:00">12:00</option><option value="13:00">13:00</option><option value="14:00">14:00</option><option value="15:00">15:00</option><option value="16:00">16:00</option><option value="17:00">17:00</option><option value="18:00">18:00</option><option value="19:00">19:00</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="mb-3">
-                            <label for="drink" class="form-label text-muted fw-semibold small">Choose Your Favorite Drink:</label>
+                            <label for="drink" class="form-label text-muted fw-semibold small">Favorite Complimentary Drink:</label>
                             <select class="form-select form-control-pink rounded-3" id="drink" name="drink">
                                 <option value="matcha">Matcha Latte</option>
                                 <option value="herbal-tea">Warm Herbal Tea</option>
@@ -132,14 +113,12 @@
                                 <option value="lemon-water">Lemon Mint Water</option>
                             </select>
                         </div>
- 
                         <div class="mb-4">
-                            <label for="message" class="form-label text-muted fw-semibold small">Your Message:</label>
-                            <textarea class="form-control form-control-pink rounded-3" id="message" name="message" rows="4" placeholder="Write your notes here..."></textarea>
+                            <label for="message" class="form-label text-muted fw-semibold small">Notes (optional):</label>
+                            <textarea class="form-control form-control-pink rounded-3" id="message" name="message" rows="3" placeholder="Wishes, references, allergies..."></textarea>
                         </div>
- 
                         <div class="btn-group w-100" role="group" aria-label="Form Action Buttons">
-                            <button type="submit" class="btn btn-pink py-2 rounded-start-pill fw-semibold">Send Message</button>
+                            <button type="submit" class="btn btn-pink py-2 rounded-start-pill fw-semibold">Send Request</button>
                             <button type="reset" class="btn btn-outline-pink py-2 rounded-end-pill fw-semibold">Reset</button>
                         </div>
                     </form>
@@ -148,27 +127,27 @@
             </main>
         </div>
     </div>
- 
+
     <div id="popupModal" class="modal">
         <div class="modal-content p-4 rounded-4 bg-white position-relative shadow-lg">
             <span id="closePopup" class="close position-absolute top-0 end-0 p-3 fs-4">&times;</span>
             <h3 class="h5 fw-bold text-dark-pink mb-3">Subscribe to Beauty Lab</h3>
-            <form id="popupForm">
+            <form id="popupForm" novalidate>
                 <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                    <input type="text" inputmode="email" id="popupEmail" class="form-control" placeholder="Enter your email" data-rules="required|email">
                 </div>
                 <button type="submit" class="btn btn-pink w-100">Subscribe</button>
             </form>
         </div>
     </div>
- 
+
     <footer class="bg-white-90 text-center py-3 border-top mt-auto">
         <div class="container">
             <p class="mb-0 text-muted small">&copy; 2026 Beauty Lab. All rights reserved. | Authors: Yerkenaz Azat & Nazerke Bozgulan</p>
         </div>
     </footer>
- 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
